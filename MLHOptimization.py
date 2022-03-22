@@ -156,7 +156,7 @@ print('entering to lr germany ...')
 res_lr_ger = gridsearch(hp_lr,lr, X_train_ger, y_train_ger)
 print('entering to lr spain ...')
 res_lr_spain = gridsearch(hp_lr,lr, X_train_spain, y_train_spain)
-with open('mloptimization.txt', 'w') as f:
+with open('mloptimization.txt', 'a') as f:
     #f.write('best lr score usa: '+ res_lr_usa[0]+'')
     f.write('best lr score usa: '+ str(res_lr_usa[0])+'')
     f.write('\n')
@@ -185,7 +185,7 @@ print('entering to mlp germany ...')
 res_mlp_ger = gridsearch(hp_mlp,mlp, X_train_ger, y_train_ger)
 print('entering to mlp spain ...')
 res_mlp_spain = gridsearch(hp_mlp,mlp, X_train_spain, y_train_spain)
-with open('mloptimization.txt', 'w') as f:
+with open('mloptimization.txt', 'a') as f:
     f.write('\n')
     f.write('MLP')
     f.write('best mlp score usa: '+ str(res_mlp_usa[0])+'')
@@ -213,7 +213,7 @@ print('entering to knn germany ...')
 res_knn_ger = gridsearch(hp_knn,knnr, X_train_ger, y_train_ger)
 print('entering to knn spain ...')
 res_knn_spain = gridsearch(hp_knn,knnr, X_train_spain, y_train_spain)
-with open('mloptimization.txt', 'w') as f:
+with open('mloptimization.txt', 'a') as f:
     f.write('\n')
     f.write('KNN')
     f.write('best knn score usa: '+ str(res_knn_usa[0])+'')
@@ -245,7 +245,7 @@ print('entering to rf germany ...')
 res_rf_ger = gridsearch(hp_rf,rf, X_train_ger, y_train_ger)
 print('entering to rf spain ...')
 res_rf_spain = gridsearch(hp_rf,rf, X_train_spain, y_train_spain)
-with open('mloptimization.txt', 'w') as f:
+with open('mloptimization.txt', 'a') as f:
     f.write('\n')
     f.write('RF')
     f.write('best rf score usa: '+ str(res_rf_usa[0])+'')
@@ -279,7 +279,7 @@ print('entering to xgb germany ...')
 res_xgb_ger = gridsearch(hp_xgb,xgb, X_train_ger, y_train_ger)
 print('entering to xgb spain ...')
 res_xgb_spain = gridsearch(hp_xgb,xgb, X_train_spain, y_train_spain)
-with open('mloptimization.txt', 'w') as f:
+with open('mloptimization.txt', 'a') as f:
     f.write('\n')
     f.write('XGB')
     f.write('best xgb score usa: '+ str(res_xgb_usa[0])+'')
@@ -310,7 +310,7 @@ res_df_ger = gridsearch(hp_df,df, X_train_ger, y_train_ger)
 print('entering to dt spain ...')
 res_df_spain = gridsearch(hp_df,df, X_train_spain, y_train_spain)
 
-with open('mloptimization.txt', 'w') as f:
+with open('mloptimization.txt', 'a') as f:
     f.write('\n')
     f.write('DT')
     f.write('best dt score usa: '+ str(res_df_usa[0])+'')
@@ -415,7 +415,7 @@ metrics_xgb_spain = regression_results(y_test_usa,pred_xgb_spain)
 metrics_dt_spain = regression_results(y_test_usa,pred_dt_spain)
 
 ## Exporting evaluation results to a txt file
-with open('mloptimization.txt', 'w') as f:
+with open('mloptimization.txt', 'a') as f:
    f.write('\n')
     f.write('Evaluation\n')
     f.write('USA\n')
